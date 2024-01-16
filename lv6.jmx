@@ -40,8 +40,8 @@
           <stringProp name="LoopController.loops">1</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">4</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2</stringProp>
         <boolProp name="ThreadGroup.delayedStart">false</boolProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -68,6 +68,9 @@ String feritSearchUrl = &quot;https://www.google.com/search?q=ferit&amp;oq=ferit
 WDS.browser.get(feritSearchUrl); //workaround za problem sa sendKeys metodom
 
 WDS.browser.findElement(By.xpath(&quot;//*[@id=\&quot;rso\&quot;]/div[1]/div/div/div/div/div/div/div/div[1]/div/span/a/div/span/div&quot;)); //klik na ferit link
+
+WDS.browser.navigate().back();
+WDS.browser.navigate().back(); //navigate back to http://google.com
 
 WDS.sampleResult.sampleEnd();</stringProp>
           <stringProp name="WebDriverSampler.parameters"></stringProp>
